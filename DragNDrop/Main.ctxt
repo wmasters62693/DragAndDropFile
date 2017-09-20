@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ launchFX()
+comment3.params=
+comment3.target=void\ initialiseGUI()
+comment4.params=
+comment4.target=void\ openDNDWindow()
+comment5.params=newFile
+comment5.target=void\ doSomeThingWithNewFile(java.util.List)
+comment6.params=newFile
+comment6.target=java.lang.String\ splitUpDirectoryA(java.util.List)
+comment7.params=newFiles
+comment7.target=java.lang.String\ splitUpDirectory(java.util.List)
+comment8.params=
+comment8.target=void\ terminate()
+numComments=9
