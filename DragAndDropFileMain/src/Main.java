@@ -25,6 +25,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import java.lang.String;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
+import java.io.IOException;
+
 
 public class Main
 {
@@ -46,18 +50,33 @@ public class Main
         Stage stage = new Stage();
         stage.setTitle("Testing drag and drop in JavaFX");
         stage.setResizable(false);
-        Pane rootPane = new Pane();
-        stage.setScene(new Scene(rootPane));
         stage.setWidth(720);
         stage.setHeight(720);
         stage.setOnCloseRequest((WindowEvent we) -> terminate());
         stage.show();
 
-        Button DNDbtn = new Button();
+        
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("MainWindow.fxml"));
+        
+            Pane rootPane = (AnchorPane) loader.load();
+            Scene scene = new Scene(rootPane);
+            stage.setScene(scene);
+            stage.show();
+            
+        } catch (IOException io) {
+            System.out.println("ERROR: " + io);
+        }
+        
+        
+        
+        
+        /*Button DNDbtn = new Button();
         DNDbtn.setOnAction((ActionEvent ae) -> openDNDWindow());
         DNDbtn.setText("Add a new file");
 
-        rootPane.getChildren().add(DNDbtn);
+        rootPane.getChildren().add(DNDbtn);*/
     }
 
     public static void openDNDWindow() {
